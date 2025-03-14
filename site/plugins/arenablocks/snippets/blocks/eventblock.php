@@ -37,7 +37,7 @@ $format = $block->format()->value();
                     </div>
                 <?php else: ?>
                     <div id="<?= $event->id() ?>" class="schedule-event grid grid-three gap-1 ">
-                        <img src="<?= $event->image()->toFile()->url() ?>" alt="<?= $event->title() ?>">
+                        <img src="<?= $event->image()->toFile()->crop(800,800)->url() ?>" alt="<?= $event->title() ?>">
                         <div class="grid grid-one gap-1 span-2 <?= $event->featured()->bool() ? 'cta-block yellow-block torn-paper' : '' ?>">
                             <h3 class="h2"><?= $event->title() ?></h3>
                             <?php if ($event->detail()->isNotEmpty()): ?>
@@ -57,7 +57,7 @@ $format = $block->format()->value();
             <?php foreach ($events as $event): ?>
                 <div id="<?= $event->id() ?>" class="schedule-event-item grid grid-one gap-1 ">
                     <?php if ($event->image()->isNotEmpty()): ?>
-                        <img src="<?= $event->image()->toFile()->url() ?>" alt="<?= $event->title() ?>">
+                        <img src="<?= $event->image()->toFile()->crop(800,800)->url() ?>" alt="<?= $event->title() ?>">
                     <?php endif ?>
                     <div class="grid grid-one gap-1 <?= $event->featured()->bool() ? 'cta-block yellow-block torn-paper' : '' ?>">
                         <h3 class="h2"><?= $event->title() ?></h3>
@@ -77,7 +77,7 @@ $format = $block->format()->value();
             <?php foreach ($events as $event): ?>
                 <div id="<?= $event->id() ?>" class="schedule-event-item grid grid-one gap-1 ">
                     <?php if ($event->image()->isNotEmpty()): ?>
-                        <img src="<?= $event->image()->toFile()->url() ?>" alt="<?= $event->title() ?>">
+                        <img src="<?= $event->image()->toFile()->crop(800,800)->url() ?>" alt="<?= $event->title() ?>">
                     <?php endif ?>
                     <div class="grid grid-one gap-1 <?= $event->featured()->bool() ? 'cta-block yellow-block torn-paper' : '' ?>">
                         <h3 class="h2"><?= $event->title() ?></h3>
