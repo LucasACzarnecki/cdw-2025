@@ -193,7 +193,7 @@
 	--font-weight: 500;
 	--font-width: 102;
 	font-variation-settings: "wght" var(--font-weight), "wdth" var(--font-width);
-	line-height: var(--leading-vtight);
+	line-height: var(--leading-tight);
 	font-size: var(--font-size-h1);
   }
   h2, .h2 {
