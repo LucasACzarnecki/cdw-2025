@@ -14,6 +14,8 @@
         <?php foreach ($page->blocks()->toBlocks() as $block): ?>
             <?php if ($block->type() == 'eventblock'): ?>
                 <?php snippet('blocks/eventblock', ['block' => $block]) ?>
+                <?php elseif ($block->type() == 'scheduleblock'): ?>
+                <?php snippet('blocks/scheduleblock', ['block' => $block]) ?>
             <?php endif ?>
         <?php endforeach ?>
     </div>
