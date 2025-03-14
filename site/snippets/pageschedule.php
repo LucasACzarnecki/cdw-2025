@@ -12,7 +12,7 @@ if ($scheduleBlocks->isNotEmpty() || $eventBlocks->isNotEmpty()):
                 <ul>
                     <?php foreach ($block->events()->toStructure() as $event): ?>
                         <li>
-                            <a href="#<?= $event->event()->toPage()->slug() ?>">
+                            <a class="tight" href="#<?= $event->event()->toPage()->slug() ?>">
                                 <?= $event->event()->toPage()->title() ?>
                             </a>
                         </li>
@@ -27,7 +27,7 @@ if ($scheduleBlocks->isNotEmpty() || $eventBlocks->isNotEmpty()):
                 <ul>
                     <?php foreach ($block->events()->toStructure() as $event): ?>
                         <li>
-                            <a href="#<?= $event->id() ?>">
+                            <a class="tight" href="#<?= $event->id() ?>">
                                 <?= $event->title()->html() ?>
                             </a>
                         </li>

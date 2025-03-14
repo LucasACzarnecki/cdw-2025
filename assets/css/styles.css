@@ -250,6 +250,10 @@
   ul li {
     margin-bottom: var(--space-025);
 }
+
+.tight {
+	line-height: var(--leading-tight);
+}
   
   /********************************************
    *    LINKS
@@ -382,6 +386,7 @@
   .torn-paper {
 	position: relative;
 	border-radius: 0px;
+	border: none;
   }
 
   /* All torn edges will be added dynamically */
@@ -428,6 +433,7 @@
 	width: 5rem;
 	fill: var(--primary-color);
 	transition: all 0.2s ease;
+	margin-right: var(--space-1)
 }
 
 
@@ -603,6 +609,7 @@
 input[type="email"] {
 	padding: var(--space-05) var(--space-05);
 	border-radius: var(--border-rad-sm);
+	width: 100%;
 }
 
 input[type="email"]::selection {

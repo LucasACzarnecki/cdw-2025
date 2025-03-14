@@ -14,4 +14,4 @@ fields:
   customwidth:
     label: Width
     type: number
-    help: 'Specify the width of the image in vw.'
+    help: 'Specify the width of the image in %.'

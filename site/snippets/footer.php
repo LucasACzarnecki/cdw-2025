@@ -2,12 +2,12 @@
 
   <div class="grid gap-2 grid-four sans light mt-3 mb-6">
     <div class="grid grid-one gap-05">
-      <h3><a href="<?= url() ?>">Charlottesville Design Week</a></h3>
+      <h3><a href="<?= url() ?>">Cville Design Week</a></h3>
       <p>Including a range of design disciplines, this week of mostly free events brings together our creative community.</p>
     </div>
     <div id="insta">
       
-        <p>Follow Tuesday&nbsp;Design&nbsp;Society <a href="https://www.instagram.com/tuesdaydesignsociety/" target="_blank">on Instagram</a> for updates.</p>
+        <p>Follow Tuesday Design Society <a href="https://www.instagram.com/tuesdaydesignsociety/" target="_blank">on Instagram</a> for updates.</p>
     </div>
    
     <div id="meetup">
