@@ -1,0 +1,16 @@
+name: Image Slider
+fields:
+  images:
+    type: files
+    label: Select Images
+    multiple: true
+    template: image
+    help: Select multiple images to display in the slider.
+  sliderLabel:
+    type: text
+    label: Slider Label
+    help: Enter a label for the slider.
+  sliderTitle:
+    type: text
+    label: Slider Title
+    help: Enter a title for the slider.

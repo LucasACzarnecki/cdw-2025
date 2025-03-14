@@ -1,0 +1,17 @@
+title: Image
+
+fields:
+  alt:
+    label: Alt Text
+    type: text
+    help: 'Describe the image for accessibility and SEO purposes.'
+
+  link:
+    label: Link
+    type: url
+    help: 'Optional: Add a URL to link this image to a webpage.'
+
+  customwidth:
+    label: Width
+    type: number
+    help: 'Specify the width of the image in vw.'

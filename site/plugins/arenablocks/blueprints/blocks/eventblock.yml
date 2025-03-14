@@ -1,0 +1,65 @@
+title: Event Block
+preview: fields
+wysiwyg: true
+icon: calendar
+
+fields:
+  datetime:
+    label: Time
+    type: text
+
+  header:
+    label: Optional Header
+    type: text
+
+  subheader:
+    label: Optional Sub Header
+    type: text
+
+  format:
+    label: Format
+    type: select
+    options:
+      1: 1 Column
+      2: 2 Columns
+      3: 3 Columns
+
+  events:
+    label: Events
+    type: structure
+    fields:
+      id:
+        label: ID
+        type: text
+        help: 'Unique identifier for the event'
+      title:
+        label: Title
+        type: text
+      detail:
+        label: Detail Text
+        type: text
+      description:
+        label: Description Text
+        type: textarea
+      image:
+        label: Image
+        type: files
+        multiple: false
+      link_url:
+        label: Link URL
+        type: url
+      link_text:
+        label: Link Text
+        type: text
+      featured:
+        label: Featured
+        type: toggle
+        options:
+          - No
+          - Yes
+  pagenav:
+    label: Include in page navigation
+    type: toggle
+    options:
+      - No
+      - Yes

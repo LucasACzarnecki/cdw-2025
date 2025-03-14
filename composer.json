@@ -1,0 +1,39 @@
+{
+  "name": "lucasczarnecki/charlottesville-design-week",
+  "description": "Website for the Charlottesville Design Week",
+  "type": "project",
+  "keywords": [
+    "kirby",
+    "cms",
+    "design week",
+    "charlottesville"
+  ],
+  "authors": [
+    {
+      "name": "Lucas Czarnecki",
+      "email": "lucas@arenatheagency.com",
+      "homepage": "https://arenatheagency.com"
+    }
+  ],
+  "homepage": "https://charlottesvilledesignweek.com",
+  "support": {
+    "email": "lucas@charlottesvilledesignweek.com",
+    "source": "https://github.com/LucasACzarnecki/cdw-2025"
+  },
+  "require": {
+    "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0",
+    "getkirby/cms": "^4.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "getkirby/composer-installer": true
+    },
+    "optimize-autoloader": true
+  },
+  "scripts": {
+    "start": [
+      "Composer\\Config::disableProcessTimeout",
+      "@php -S localhost:8000 kirby/router.php"
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+title: Schedule Block
+preview: fields
+wysiwyg: true
+icon: calendar
+
+fields:
+  datetime:
+    label: Date
+    type: text
+
+  events:
+    label: Events
+    type: structure
+    fields:
+      event:
+        label: Event Page
+        type: pages
+        query: site.index
+        multiple: true
+      linked:
+        label: Linked
+        type: toggle
+        text:
+          - No
+          - Yes
+      featured:
+        label: Featured
+        type: toggle
+        text:
+          - No
+          - Yes

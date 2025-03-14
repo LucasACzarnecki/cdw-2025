@@ -1,0 +1,69 @@
+title: Site
+
+tabs:
+  content:
+    columns:
+      left:
+        width: 2/3
+        sections:
+          pages:
+            type: pages
+          eventbrite:
+            type: fields
+            fields:
+              eventbrite_code:
+                label: Eventbrite code
+                help: Paste the Eventbrite event ID. It should look something like "825271438087"
+                type: text
+
+      right:
+        width: 1/3
+        sections:
+          logos:
+            label: Logos
+            type: files
+            multiple: true
+            template: image
+
+          host_logos:
+            label: Host Logos
+            type: fields
+            fields:
+              host_logos:
+                label: Select Host Logos
+                type: files
+                query: site.files.template("image")
+                multiple: true
+
+          large_logos:
+            label: Large Sponsor Logos
+            type: fields
+            fields:
+              large_logos:
+                label: Select Large Logos
+                type: files
+                query: site.files.template("image")
+                multiple: true
+
+          medium_logos:
+            label: Medium Sponsor Logos
+            type: fields
+            fields:
+              medium_logos:
+                label: Select Medium Logos
+                type: files
+                query: site.files.template("image")
+                multiple: true
+
+          small_logos:
+            label: Small Sponsor Logos
+            type: fields
+            fields:
+              small_logos:
+                label: Select Small Logos
+                type: files
+                query: site.files.template("image")
+                multiple: true
+
+  seo:
+    extends: tabs/seo

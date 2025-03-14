@@ -1,0 +1,45 @@
+title: Home
+
+tabs:
+  content:
+    label: Content
+    icon: text
+    fields:
+      hero:
+        label: Hero Section
+        type: group
+        fields:
+          prefix:
+            label: Prefix
+            type: text
+          header:
+            label: Title
+            type: text
+          postfix:
+            label: Postfix
+            type: text
+          featured_image:
+            label: Featured Image
+            type: files
+            multiple: false
+
+      about:
+        label: About Section
+        type: group
+        fields:
+          introduction:
+            label: Introduction
+            type: writer
+          about_image:
+            label: Image
+            type: files
+            multiple: false
+
+      blocks:
+        label: Blocks Section
+        type: blocks
+        fieldsets:
+          - scheduleblock
+
+  seo:
+    extends: tabs/seo
