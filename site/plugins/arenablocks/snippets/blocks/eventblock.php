@@ -22,7 +22,7 @@ $format = $block->format()->value();
         <h3><?= $datetime ?></h3>
     </div>
     <?php if ($format == '1 Column'): ?>
-        <div class="schedule-events grid grid-one span-3 gap-3">
+        <div class="schedule-events grid grid-one span-3 gap-3 mb-3">
             <?php foreach ($events as $event): ?>
                 <?php if ($event->image()->isEmpty()): ?>
                     <div id="<?= $event->id() ?>" class="schedule-event grid grid-one gap-1 <?= $event->featured()->bool() ? 'cta-block yellow-block torn-paper' : '' ?>">
@@ -53,7 +53,7 @@ $format = $block->format()->value();
             <?php endforeach ?>
         </div>
     <?php elseif ($format == '2 Columns'): ?>
-        <div class="schedule-event grid grid-two span-3 gap-3">
+        <div class="schedule-event grid grid-two span-3 gap-3 mb-3">
             <?php foreach ($events as $event): ?>
                 <div id="<?= $event->id() ?>" class="schedule-event-item grid grid-one gap-1 ">
                     <?php if ($event->image()->isNotEmpty()): ?>
@@ -73,7 +73,7 @@ $format = $block->format()->value();
             <?php endforeach ?>
         </div>
     <?php elseif ($format == '3 Columns'): ?>
-        <div class="schedule-event grid grid-three span-4 gap-3">
+        <div class="schedule-event grid grid-three span-4 gap-3 mb-3">
             <?php foreach ($events as $event): ?>
                 <div id="<?= $event->id() ?>" class="schedule-event-item grid grid-one gap-1 ">
                     <?php if ($event->image()->isNotEmpty()): ?>
