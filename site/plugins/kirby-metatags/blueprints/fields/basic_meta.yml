@@ -1,0 +1,32 @@
+type: group
+fields:
+  meta_headline:
+    label: Basic Meta Information
+    type: headline
+    numbered: false
+  meta_title:
+    label: Meta Title
+    type: text
+    help: The site or page title. Will default to site/page name when this field is empty.
+  meta_description:
+    label: Description
+    type: text
+    help: A short description of the site/page that will be displayed underneath the page title by search engines.
+  meta_keywords:
+    label: Keywords
+    type: tags
+    help: A few keywords related to the content of the page. If it is empty will default to site keywords. <br> Since 2009 this is not relevant anymore and the abuse of it could hurt Google page raking.
+  meta_canonical_url:
+    label: Canonical URL
+    type: url
+    help: The canonical URL of the page. Will default to page URL when this field is empty.
+  meta_author:
+    label: Author/s
+    type: text
+    help: The name of the author of the site/page. Can be an entity or a person. Will default to site author when this field is empty.
+  favicon: fields/favicon
+  meta_image:
+    label: Meta Image (≈1200x630)
+    type: files
+    multiple: false
+    help: An image used for embed links, the image used here will apply OG and Twitter cards unless those fields contain an specific image. </br> Will default to site Meta Image when this field is empty.

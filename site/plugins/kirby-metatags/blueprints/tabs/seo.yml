@@ -1,0 +1,56 @@
+label: Meta (SEO)
+icon: search
+
+columns:
+  basic_meta_main:
+    width: 2/3
+    sections:
+      basic_meta_section:
+        type: fields
+        fields:
+          basic_meta_fields: fields/basic_meta
+  basic_meta_sidebar:
+    width: 1/3
+    sticky: true
+    fields:
+      meta_info: 
+        type: info
+        label: Info
+        text: At page level **only fill what you want to be different from the site meta**. All empty fields will default to that.
+  open_graph_main:
+    width: 2/3
+    sections:
+      open_graph_section:
+        type: fields
+        fields:
+          open_graph_fields: fields/open_graph
+  open_graph_sidebar:
+    width: 1/3
+    sticky: true
+    fields:
+      og_info:
+        type: info
+        label: Info
+        text: If _OG Title_, _OG Description_ and _OG Image_ are empty will default to the equivalent in the Basic Meta section
+  twitter_main:
+    width: 2/3
+    sections:
+      twitter_section:
+        type: fields
+        fields:
+          twitter_fields: fields/twitter
+  twitter_sidebar:
+    width: 1/3
+    sticky: true
+    fields:
+      twitter_info: 
+        type: info
+        label: Info
+        text: _Twitter Title_, _Twitter Description_ and _Twitter Image_ will default to the equivalent in the Basic Meta section when they are empty.
+  # robots_main:
+  #   width: 2/3
+  #   sections:
+  #     robots_section:
+  #       type: fields
+  #       fields:
+  #         robots_fields: fields/robots

@@ -1,0 +1,12 @@
+type: group
+fields:
+  favicon:
+    type: files
+    template: favicon
+    width: 1/2
+    max: 1
+  themeColor:
+    label: HEX Theme Color
+    type: text
+    pattern: '^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$'
+    width: 1/2
