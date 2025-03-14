@@ -5,15 +5,17 @@ $events = $block->events()->toStructure();
 $format = $block->format()->value();
 ?>
 
-<div class="mt-2">
-<?php if ($block->header()->isNotEmpty()): ?>
-    <h2 class="h1 pink"><?= $block->header() ?></h2>
-<?php endif ?>
 
-<?php if ($block->subheader()->isNotEmpty()): ?>
-    <h4 class="label"><?= $block->subheader() ?></h4>
+<?php if ($block->header()->isNotEmpty()): ?>
+    <div class="mt-2">
+        <h2 class="h1 pink"><?= $block->header() ?></h2>
+
+
+        <?php if ($block->subheader()->isNotEmpty()): ?>
+            <h4 class="label"><?= $block->subheader() ?></h4>
+        <?php endif ?>
+    </div>
 <?php endif ?>
-</div>
 
 <div class="schedule-block grid grid-four gap-3">
     <div class="schedule-datetime">
