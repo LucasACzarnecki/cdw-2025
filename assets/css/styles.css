@@ -330,27 +330,27 @@
 
   .mint-block {
 	background-color: var(--color-mint);
-	border: 1px solid var(--gray-3);
+	border: 1px solid var(--color-mint);
 	border-radius: var(--border-rad);
   }
 
   .pink-block {
 	background-color: var(--color-pink);
-	border: 1px solid var(--gray-3);
+	border: 1px solid var(--color-pink);
 	border-radius: var(--border-rad);
 	color: white;
   }
 
   .purple-block {
 	background-color: var(--color-purple);
-	border: 1px solid var(--gray-3);
+	border: 1px solid var(--color-purple);
 	border-radius: var(--border-rad);
 	color: white;
   }
 
   .yellow-block {
 	background-color: var(--color-yellow);
-	border: 1px solid var(--gray-3);
+	border: 1px solid var(--color-yellow);
 	border-radius: var(--border-rad);
   }
 
