@@ -22,6 +22,6 @@
 
 <?php snippet('registration') ?>
 
-<?php snippet('sponsors') ?>
+
 
 <?php snippet('footer') ?>
