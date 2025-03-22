@@ -10,7 +10,7 @@
                     <?php foreach ($site->host_logos()->toFiles() as $logo): ?>
                         <?php $widthStyle = $logo->customwidth()->isNotEmpty() ? 'style="width: ' . $logo->customwidth() . '%;"' : ''; ?>
                         <?php if ($logo->link()->isNotEmpty()): ?>
-                            <a href="<?= $logo->link() ?>" target="_blank">
+                            <a href="<?= $logo->link() ?>" target="_blank" style="width: 100%">
                                 <img src="<?= $logo->url() ?>" alt="<?= $logo->alt() ?>" <?= $widthStyle ?>>
                             </a>
                         <?php else: ?>
@@ -33,7 +33,7 @@
                     <?php foreach ($site->large_logos()->toFiles() as $logo): ?>
                         <?php $widthStyle = $logo->customwidth()->isNotEmpty() ? 'style="width: ' . $logo->customwidth() . '%;"' : ''; ?>
                         <?php if ($logo->link()->isNotEmpty()): ?>
-                            <a href="<?= $logo->link() ?>" target="_blank">
+                            <a href="<?= $logo->link() ?>" target="_blank" style="width: 100%">
                                 <img src="<?= $logo->url() ?>" alt="<?= $logo->alt() ?>" <?= $widthStyle ?>>
                             </a>
                         <?php else: ?>
@@ -46,11 +46,12 @@
             // Check if medium_logos field is not empty
             if ($site->medium_logos()->isNotEmpty()) {
             ?>
+
                 <div class="grid grid-four logos gap-3">
                     <?php foreach ($site->medium_logos()->toFiles() as $logo): ?>
                         <?php $widthStyle = $logo->customwidth()->isNotEmpty() ? 'style="width: ' . $logo->customwidth() . '%;"' : ''; ?>
                         <?php if ($logo->link()->isNotEmpty()): ?>
-                            <a href="<?= $logo->link() ?>" target="_blank">
+                            <a href="<?= $logo->link() ?>" target="_blank" style="width: 100%">
                                 <img src="<?= $logo->url() ?>" alt="<?= $logo->alt() ?>" <?= $widthStyle ?>>
                             </a>
                         <?php else: ?>
@@ -67,7 +68,7 @@
                     <?php foreach ($site->small_logos()->toFiles() as $logo): ?>
                         <?php $widthStyle = $logo->customwidth()->isNotEmpty() ? 'style="width: ' . $logo->customwidth() . '%;"' : ''; ?>
                         <?php if ($logo->link()->isNotEmpty()): ?>
-                            <a href="<?= $logo->link() ?>" target="_blank">
+                            <a href="<?= $logo->link() ?>" target="_blank" style="width: 100%">
                                 <img src="<?= $logo->url() ?>" alt="<?= $logo->alt() ?>" <?= $widthStyle ?>>
                             </a>
                         <?php else: ?>
