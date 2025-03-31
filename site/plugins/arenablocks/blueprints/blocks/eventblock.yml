@@ -41,6 +41,15 @@ fields:
       description:
         label: Description Text
         type: textarea
+      venue:
+        label: Venue
+        type: select
+        options: query
+        query:
+          fetch: site.venues.toStructure
+          text: "{{ structureItem.name }}"
+          value: "{{ structureItem.name }}"
+        help: "Select only if the event takes place at multiple venues."
       image:
         label: Image
         type: files

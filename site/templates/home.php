@@ -20,6 +20,19 @@
 
 </section>
 
+<?php
+// Determine the venues value
+$venues = [];
+
+// Add all venues from the site's "venues" field
+foreach ($site->venues()->toStructure() as $venue) {
+    $venues[] = $venue->name()->value();
+}
+?>
+
+<?php snippet('venues', ['venues' => $venues]) ?>
+
+
 <?php snippet('registration') ?>
 
 <?php snippet('sponsors') ?>

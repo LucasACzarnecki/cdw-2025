@@ -28,7 +28,10 @@ $format = $block->format()->value();
                     <div id="<?= $event->id() ?>" class="schedule-event grid grid-one gap-1 <?= $event->featured()->bool() ? 'cta-block yellow-block torn-paper' : '' ?>">
                         <h3 class="h2"><?= $event->title() ?></h3>
                         <?php if ($event->detail()->isNotEmpty()): ?>
-                            <p class="label <?= $event->featured()->bool() ? '' : 'purple' ?>"><?= $event->detail() ?></p>
+                            <p class="label <?= $event->featured()->bool() ? '' : 'purple' ?>"><?= $event->detail() ?>
+                            <?php if ($event->venue()->isNotEmpty()): ?>
+                                    at <?= $event->venue() ?>
+                                <?php endif ?></p>
                         <?php endif ?>
                         <?= $event->description()->kt() ?>
                         <?php if ($event->link_url()->isNotEmpty()): ?>
@@ -41,7 +44,10 @@ $format = $block->format()->value();
                         <div class="grid grid-one gap-1 span-2 <?= $event->featured()->bool() ? 'cta-block yellow-block torn-paper' : '' ?>">
                             <h3 class="h2"><?= $event->title() ?></h3>
                             <?php if ($event->detail()->isNotEmpty()): ?>
-                                <p class="label <?= $event->featured()->bool() ? '' : 'purple' ?>"><?= $event->detail() ?></p>
+                                <p class="label <?= $event->featured()->bool() ? '' : 'purple' ?>"><?= $event->detail() ?>
+                                <?php if ($event->venue()->isNotEmpty()): ?>
+                                    at <?= $event->venue() ?>
+                                <?php endif ?></p>
                             <?php endif ?>
                             <?= $event->description()->kt() ?>
                             <?php if ($event->link_url()->isNotEmpty()): ?>
@@ -62,7 +68,10 @@ $format = $block->format()->value();
                     <div class="grid grid-one gap-1 <?= $event->featured()->bool() ? 'cta-block yellow-block torn-paper' : '' ?>">
                         <h3 class="h2"><?= $event->title() ?></h3>
                         <?php if ($event->detail()->isNotEmpty()): ?>
-                            <p class="label <?= $event->featured()->bool() ? '' : 'purple' ?>"><?= $event->detail() ?></p>
+                            <p class="label <?= $event->featured()->bool() ? '' : 'purple' ?>"><?= $event->detail() ?>
+                            <?php if ($event->venue()->isNotEmpty()): ?>
+                                    at <?= $event->venue() ?>
+                                <?php endif ?></p>
                         <?php endif ?>
                         <?= $event->description()->kt() ?>
                         <?php if ($event->link_url()->isNotEmpty()): ?>
@@ -82,7 +91,10 @@ $format = $block->format()->value();
                     <div class="grid grid-one gap-1 <?= $event->featured()->bool() ? 'cta-block yellow-block torn-paper' : '' ?>">
                         <h3 class="h2"><?= $event->title() ?></h3>
                         <?php if ($event->detail()->isNotEmpty()): ?>
-                            <p class="label <?= $event->featured()->bool() ? '' : 'purple' ?>"><?= $event->detail() ?></p>
+                            <p class="label <?= $event->featured()->bool() ? '' : 'purple' ?>"><?= $event->detail() ?>
+                            <?php if ($event->venue()->isNotEmpty()): ?>
+                                    at <?= $event->venue() ?>
+                                <?php endif ?></p>
                         <?php endif ?>
                         <?= $event->description()->kt() ?>
                         <?php if ($event->link_url()->isNotEmpty()): ?>

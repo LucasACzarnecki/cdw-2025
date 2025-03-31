@@ -12,11 +12,15 @@ $events = $block->events()->toStructure();
         <?php foreach ($events as $event): ?>
             <?php $eventPage = $event->event()->toPage(); ?>
             <?php if ($eventPage): ?>
+                <?php
+                // Determine the venue text
+                $venueText = $eventPage->venue()->isNotEmpty() ? $eventPage->venue() : 'multiple venues';
+                ?>
                 <div id="<?= $eventPage->slug() ?>" class="schedule-event grid grid-three gap-1 ">
                     <img src="<?= $eventPage->featured_image()->toFile()->crop(1200,1200)->url() ?>" alt="">
                     <div class="grid grid-one gap-05 span-2 <?= $event->featured()->bool() ? 'cta-block yellow-block torn-paper' : '' ?>">
                         <h3 class="h2"><?= $eventPage->title() ?></h3>
-                        <p class="label <?= $event->featured()->bool() ? '' : 'purple' ?>"><?= $eventPage->time() ?> at <?= $eventPage->location() ?></p>
+                        <p class="label <?= $event->featured()->bool() ? '' : 'purple' ?>"><?= $eventPage->time() ?> at <?= $venueText ?></p>
                         <p class="label <?= $event->featured()->bool() ? '' : 'purple' ?>"><?= $eventPage->cost() ?></p>
                         <p><?= $eventPage->description() ?></p>
                         <?php if ($event->linked()->bool()): ?>

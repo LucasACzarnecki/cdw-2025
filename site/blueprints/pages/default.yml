@@ -56,15 +56,25 @@ tabs:
               time:
                 label: Time
                 type: text
-              location:
-                label: Location
-                type: text
+              venue:
+                label: Venue
+                type: select
+                options: query
+                query:
+                  fetch: site.venues.toStructure
+                  text: "{{ structureItem.name }}"
+                  value: "{{ structureItem.name }}"
+                help: "Select only if all of the event takes place at one venue."
               cost:
                 label: Cost
                 type: text
               description:
                 label: Description
                 type: textarea
+              eventbrite_code:
+                label: Eventbrite code
+                help: Overwrite the default Eventbrite event ID. It should look something like "825271438087"
+                type: text
 
   seo:
     extends: tabs/seo

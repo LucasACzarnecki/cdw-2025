@@ -15,6 +15,28 @@ tabs:
                 label: Eventbrite code
                 help: Paste the Eventbrite event ID. It should look something like "825271438087"
                 type: text
+          venues:
+            type: fields
+            fields:
+              venues:
+                label: Venues
+                type: structure
+                fields:
+                  name:
+                    label: Venue Name
+                    type: text
+                  address:
+                    label: Address
+                    type: textarea
+                  description:
+                    label: Description
+                    type: textarea
+                  image:
+                    label: Image
+                    type: files
+                    max: 1
+            
+
 
       right:
         width: 1/3

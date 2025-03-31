@@ -1,4 +1,4 @@
-<section id="sponsors" class="grid grid-one gap-4 mb-10 cta-block purple-block torn-paper">
+<section id="sponsors" class="grid grid-one gap-4 mb-10 cta-block pink-block torn-paper">
 <div class="grid grid-four gap-3">
         <h2>Hosted by</h2>
         <div class="grid grid-one gap-3 span-3">

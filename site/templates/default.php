@@ -22,6 +22,32 @@
 
 </section>
 
+
+
+<?php
+// Determine the venues value
+$venues = [];
+
+if ($page->venue()->isNotEmpty()) {
+    // If the page has a value in its venue field, pass that selection
+    $venues[] = $page->venue()->value();
+} else {
+    // If the page has no value in its venue field, pass a list of all the page's eventblock and scheduleblock venue values, omitting duplicates
+    foreach ($page->blocks()->toBlocks() as $block) {
+        if ($block->type() == 'eventblock' || $block->type() == 'scheduleblock') {
+            foreach ($block->events()->toStructure() as $event) {
+                $venueName = $event->venue()->value();
+                if (!in_array($venueName, $venues)) {
+                    $venues[] = $venueName;
+                }
+            }
+        }
+    }
+}
+?>
+
+<?php snippet('venues', ['venues' => $venues]) ?>
+
 <?php snippet('registration') ?>
 
 <?php snippet('sponsors') ?>

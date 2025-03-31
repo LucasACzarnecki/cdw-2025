@@ -64,11 +64,18 @@
     console.log('Order complete!');
   };
 
+  <?php
+  // Determine the Eventbrite code
+  $eventbriteCode = $page->eventbrite_code()->isNotEmpty() 
+      ? $page->eventbrite_code()->html() 
+      : $site->eventbrite_code()->html();
+  ?>
+
   window.EBWidgets.createWidget({
     // Required
     widgetType: 'checkout',
-    eventId: '<?= $site->eventbrite_code()->html() ?>',
-    iframeContainerId: 'eventbrite-widget-container-<?= $site->eventbrite_code()->html() ?>',
+    eventId: '<?= $eventbriteCode ?>',
+    iframeContainerId: 'eventbrite-widget-container-<?= $eventbriteCode ?>',
 
     // Optional
     iframeContainerHeight: 1200, // Widget height in pixels. Defaults to a minimum of 625px if not provided
